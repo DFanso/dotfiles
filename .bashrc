@@ -20,3 +20,5 @@ alias config='/usr/bin/git --git-dir=/home/dfanso/.cfg/ --work-tree=/home/dfanso
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
     . /usr/share/bash-completion/bash_completion
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
