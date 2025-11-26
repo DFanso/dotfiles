@@ -171,6 +171,8 @@ bindcode $mod+Shift+90   move container to workspace  $ws10
 # keybindings for different actions: #
 ######################################
 
+#wallaper 
+exec --no-startup-id feh --bg-scale /home/dfanso/arch.jpg
 # start a terminal
 bindsym $mod+Return exec --no-startup-id xfce4-terminal
 
@@ -182,11 +184,11 @@ bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
 
 # Lock the system
 # lock with a picture:
-#bindsym $mod+l exec --no-startup-id i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
+bindsym $mod+l exec --no-startup-id i3lock -i  /home/dfanso/arch.jpg -p default|win -t
 # lock by blurring the screen:
-bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
+#bindsym $mod+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
 # lock in case after sleep
-exec --no-startup-id xss-lock -l ~/.config/i3/scripts/blur-lock
+#exec --no-startup-id xss-lock -l ~/.config/i3/scripts/blur-lock
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -437,7 +439,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
+# exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
