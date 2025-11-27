@@ -12,13 +12,16 @@ PS1='[\u@\h \W]\$ '
 export PATH="$HOME/.local/bin:$PATH"
 
 # Initialize Oh My Posh with your theme
-eval "$(oh-my-posh init bash --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/1_shell.omp.json)"
+eval "$(oh-my-posh init bash --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/quick-term.omp.json)"
 #dot file repo
 alias config='/usr/bin/git --git-dir=/home/dfanso/.cfg/ --work-tree=/home/dfanso'
 
 #bash auto complete
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
     . /usr/share/bash-completion/bash_completion
+
+#autjump
+[[ -s /usr/share/autojump/autojump.bash ]] && source /usr/share/autojump/autojump.bash
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
